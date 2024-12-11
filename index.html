@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our One Year Anniversary</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000e5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .section {
+            padding: 30px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+        .countdown {
+            font-size: 2em;
+            color: #000000;
+        }
+        .message {
+            font-size: 1.2em;
+            color: #000000;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #50235e;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>♥︎Happy One Year Baby♥︎</h1>
+        <p>Celebrating our love, today and forever.</p>
+    </header>
+
+    <div class="section">
+        <h2>Our Story</h2>
+        <p class="message">Our story is one of a love so pure and deep that it feels as if it was written in the stars, destined to unfold in the most magical way. From the very first message we exchanged, something shifted inside me—like I had found my missing piece, my soulmate. We were two hearts, separated by distance but so connected in spirit that it felt as though we had always known each other. Every conversation, every laugh, every shared dream only brought us closer, and with each passing day, I fell deeper in love with you. We've been through so much together, and yes, we've had our disagreements and our moments of frustration, but even in those times, I knew that the love we shared was something worth fighting for. Our arguments, though difficult, have always been the gateway to greater understanding, stronger communication, and a deeper bond. Through every challenge, we have only come to realize how precious our connection is. No matter what, I would choose you over and over again, because loving you is the easiest and most natural thing in the world. We’ve built something beautiful—something that’s tested, proven, and eternal. In every fight, every tear, every moment of doubt, there has been love. Love that endures, love that heals, love that grows stronger with every passing day. Our story isn’t just about us finding each other—it’s about how we’ve created a love so profound, that nothing could ever break it. You are my heart, my soul, my forever, and I am endlessly grateful for the love we share. </p></div>
+    <div class="section">
+        <h2>Countdown to Our One Year</h2>
+        <p class="countdown" id="countdown"></p>
+    </div>
+
+    <div class="section">
+        <h2>Message to You</h2>
+        <p class="message">My dearest Wijden,
+
+            Where do I even begin? From the moment you came into my life, you’ve captivated me in ways I never thought possible. You are breathtaking—every single part of you, inside and out, is a masterpiece. Your beauty radiates in everything you do, from the way your smile lights up a room to the way your eyes sparkle with curiosity and warmth. There’s a quiet strength in you that takes my breath away, a grace that leaves me in awe, and I find myself endlessly admiring the way you move through the world. But it’s not just your outward beauty that stirs me—it’s your mind, your intellect, your endless capacity for understanding and growth. The way you think, the way you challenge me, and the way you see the world is something I cherish deeply. You make me want to be better, to learn more, to become the best version of myself, simply by being who you are. You have this incredible ability to make me feel safe, loved, and seen, even from a distance. I love the way you laugh, how your voice feels like home, and the way you can turn the ordinary into something extraordinary. You are so much more than I ever dreamed of, and every day with you is a gift. I don’t know what I did to deserve someone as amazing as you, but I am beyond thankful. Thank you for being you—beautiful, intelligent, strong, and so incredibly wonderful. You are everything to me, and I love you with every part of my heart.
+            
+            Forever yours,
+            Malak
+            </p>
+    </div>
+
+    <footer>
+        <p>nhebek w n3ech9ek w nmout 3lik</p>
+    </footer>
+
+    <script>
+        // Countdown to anniversary
+        const anniversaryDate = new Date('2024-12-13T20:13:00').getTime(); // Set the date and time to 13th December at 8:13 PM
+
+        const countdownElement = document.getElementById("countdown");
+
+        const interval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = anniversaryDate - now;
+
+            if (distance <= 0) {
+                clearInterval(interval);
+                countdownElement.innerHTML = "It's time to celebrate!";
+            } else {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
